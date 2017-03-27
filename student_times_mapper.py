@@ -6,7 +6,7 @@ import csv
 
 
 def mapper():
-		reader = csv.reader(sys.stdin, delimiter='\t')
+	reader = csv.reader(sys.stdin, delimiter='\t')
     	writer = csv.writer(sys.stdout, delimiter='\t')
 
     	header = True

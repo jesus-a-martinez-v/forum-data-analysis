@@ -4,7 +4,7 @@ import csv
 
 
 def reducer():
-	reader = csv.reader(sys.stdin, delimiter='\t')
+    reader = csv.reader(sys.stdin, delimiter='\t')
     writer = csv.writer(sys.stdout, delimiter='\t', quotechar='"', quoting=csv.QUOTE_ALL)
 
     current_student_id = None  # Student id being processed.

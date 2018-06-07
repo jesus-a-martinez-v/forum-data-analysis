@@ -1,4 +1,4 @@
-# forum-data-analysis
+# Forum Data Analysis
 
 ![Forum](https://comtechies.com/wp-content/uploads/2017/07/discussion-forum-like-stackoverflow.jpg)
 

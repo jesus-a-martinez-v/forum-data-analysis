@@ -1,12 +1,9 @@
 #!/usr/bin/python
-import sys
-import csv
+
+from common import reader, writer
 
 
 def reducer():
-    reader = csv.reader(sys.stdin, delimiter='\t')
-    writer = csv.writer(sys.stdout, delimiter='\t', quotechar='"', quoting=csv.QUOTE_ALL)
-
     current_student_id = None  # Student id being processed.
     current_hour = None  # Hour being processed.
     current_count = 0  # Count of the hour being processed.
@@ -49,4 +46,5 @@ def reducer():
         writer.writerow([current_student_id, hour])
 
 
-reducer()
+if __name__ == "__main__":
+    reducer()

@@ -1,13 +1,9 @@
 #!/usr/bin/python
 
-import sys
-import csv
+from common import reader, writer
 
 
 def reducer():
-    reader = csv.reader(sys.stdin, delimiter='\t')
-    writer = csv.writer(sys.stdout, delimiter='\t')
-
     top_10 = []
     current_tag = None
     current_tag_count = 0
@@ -44,4 +40,5 @@ def reducer():
         writer.writerow([elem[0], elem[1]])
 
 
-reducer()
+if __name__ == "__main__":
+    reducer()

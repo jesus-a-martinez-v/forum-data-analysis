@@ -1,13 +1,9 @@
 #!/usr/bin/python
 
-import sys
-import csv
+from common import reader, writer
 
 
 def reducer():
-    reader = csv.reader(sys.stdin, delimiter='\t')
-    writer = csv.writer(sys.stdout, delimiter='\t')
-
     current_node_id = None
     current_question_length = 0
     answer_length_sum = 0
@@ -49,4 +45,6 @@ def reducer():
     writer.writerow([current_node_id, int(current_question_length), answer_length_mean])
 
 
-reducer()
+if __name__ == "__main__":
+    reducer()
+

@@ -1,13 +1,9 @@
 #!/usr/bin/python
 
-import sys
-import csv
+from common import reader, writer
 
 
 def reducer():
-    reader = csv.reader(sys.stdin, delimiter='\t')
-    writer = csv.writer(sys.stdout, delimiter='\t')
-
     current_node = None
     students_in_node = []
 
@@ -28,4 +24,5 @@ def reducer():
     writer.writerow([current_node, str(students_in_node)])
 
 
-reducer()
+if __name__ == "__main__":
+    reducer()
